@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day Proposal</title>
+    <style>
+        body{
+            background-color: pink;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .text1{
+            text-align: center;
+            color: black; 
+        }
+        
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        h1 {
+            color: pink;
+        }
+
+        #text {
+            color: #333;
+            font-size: 24px;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: .15em solid orange;
+            width: 0;
+            animation: typing 5s steps(30, end), blink-caret .5s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: orange }
+        }
+    </style>
+</head>
+<body>
+    <div class="text1">
+        <h2>HELLO MY BEYBI!</h2>
+    </div>
+
+    <div class="container">
+        <img src="cat.gif" width="360" height="350">
+        <h1>Will you be my Valentine?</h1>
+        <p id="text"></p>
+        <button onclick="redirect('yehey see u!!')">Yes</button>
+        <button onclick="alert('bawal!')">No</button>
+    </div>
+
+    <script>
+        const text = "Will you be my Valentine?";
+        let index = 0;
+
+        function typeWriter() {
+            if (index < text.length) {
+                document.getElementById("text").innerHTML += text.charAt(index);
+                index++;
+                setTimeout(typeWriter, 100);
+            }
+        }
+
+        typeWriter();
+        function redirect(){
+            window.location.href = "ily2.html";
+        }
+    </script>
+</body>
+</html>
